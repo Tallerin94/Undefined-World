@@ -30,33 +30,74 @@
         <!-- META -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0B0C3B"/>
-        <meta name="description" content="<?=$lang["eues"]["meta_description"];?>"/>
-        <meta name="keywords" content="<?=$lang["eues"]["meta_keywords"];?>"/>
-        <meta name="author" content="<?=$lang["eues"]["meta_author"];?>"/>
+        <meta name="description" content="<?=$lang[$region]["meta_description"];?>"/>
+        <meta name="keywords" content="<?=$lang[$region]["meta_keywords"];?>"/>
+        <meta name="author" content="<?=$lang[$region]["meta_author"];?>"/>
         <meta name="lang" content="<?=$lang[$region]["meta_lang"];?>"/>
         <meta name="DC.Title" content="<?=$lang[$region]["meta_title"];?>"/>
         <!-- DO NOT FORGET YOUR SITEMAP WITH GOOGLE -->
+
+        <!-- ROBOTS -->
+        <meta name="robots" content="index, follow"/>
+        <meta NAME="googlebot" content="index, follow"/>
         
         <!-- OG -->
         <meta property="og:title" content="<?=$lang[$region]["meta_title"];?>" />
-		<meta property="og:description" content="<?=$lang["eues"]["meta_description"];?>"/>
+		<meta property="og:description" content="<?=$lang[$region]["meta_description"];?>"/>
 		<meta property="og:url" content="<?=$url_main;?>">
 		<meta property="og:image" content="<?=$url_cdn;?>img/seo_logo.png"/>
-        <meta property="og:site_name" content="<?=$lang["eues"]["meta_site_name"];?>"/>
+        <meta property="og:site_name" content="<?=$lang[$region]["meta_site_name"];?>"/>
 
         <!-- Verificate -->
 		<!-- DO NOT FORGET YOUR KEY -->
 		<meta name="google-site-verification" content=""/>
         
+        <!-- JS -->
+        <script type="text/javascript" src="<?=$url_cdn;?>js/lib/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="<?=$url_cdn;?>js/lib/bootstrap-3.3.7.min.js"></script>
+
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="<?=$url_cdn;?>css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="<?=$url_cdn;?>css/main.css"/>
-
-        <!-- JS -->
-        <script type="text/javascript" src="<?=$url_cdn;?>js/lib/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="<?=$url_cdn;?>js/lib/bootstrap.min.js"></script>
     </head>
     <body>
-        
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../navbar/">Default</a></li>
+                    <li><a href="../navbar-static-top/">Static top</a></li>
+                    <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+                </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
     </body>
 </html>
